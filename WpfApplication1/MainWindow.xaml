@@ -1,0 +1,31 @@
+﻿<Window x:Class="Filip.ChatGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="300" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <TextBox Height="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+             ScrollViewer.VerticalScrollBarVisibility="Auto"
+             ScrollViewer.CanContentScroll="True" 
+                 HorizontalAlignment="Stretch" 
+                 Margin="5, 5, 5, 5" Name="chatArea" VerticalAlignment="Stretch" Width="Auto" Grid.Row="0" IsReadOnly="True" />
+
+        <TextBox Height="25" HorizontalAlignment="Stretch" Margin="127,8,99,7" Name="inputText" VerticalAlignment="Stretch" Width="Auto" Grid.Row="1" KeyDown="userInputText_KeyDown" />
+
+        <TextBlock HorizontalAlignment="Right" Margin="0,2,418,0" Grid.Row="2" Grid.RowSpan="2" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="61"/>
+        <TextBlock HorizontalAlignment="Left" Margin="127,2,0,0" Grid.Row="2" Grid.RowSpan="2" TextWrapping="Wrap" Text="My Port" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="247,2,0,0" Grid.Row="2" Grid.RowSpan="2" TextWrapping="Wrap" Text="Partner Address" VerticalAlignment="Top"/>
+
+        <TextBox Height="25" HorizontalAlignment="Stretch" Margin="5,5,374,5" Name="userName" VerticalAlignment="Stretch" Grid.Row="3" TextAlignment="Left" Text="Anonymous"  />
+        <TextBox Height="25" HorizontalAlignment="Stretch" Margin="124,6,258,5" Name="textBoxMyPort" VerticalAlignment="Stretch" Grid.Row="3" TextAlignment="Left" Text="900" />
+        <TextBox Height="25" HorizontalAlignment="Stretch" Margin="244,8,99,7" Name="textBoxPartnerAddress" VerticalAlignment="Stretch" Grid.Row="3" TextAlignment="Left" Text="http://192.168.0.100:900"  />
+        <Button Content="Start chat!" HorizontalAlignment="Left" Margin="401,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="startChat"/>
+        <TextBlock HorizontalAlignment="Left" Width="84" Margin="36,14,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Your message:" VerticalAlignment="Top"/>
+        <Button Content="Send" HorizontalAlignment="Left" Margin="401,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="click_sendMessage" />
+    </Grid>
+</Window>
